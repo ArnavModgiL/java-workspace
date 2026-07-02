@@ -12,6 +12,7 @@ public class Main {
         System.out.print("Enter Name: ");
         String name = sc.nextLine();
         System.out.println(name);
+        sc.close();
 
     }
 }
