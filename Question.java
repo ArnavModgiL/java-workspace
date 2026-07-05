@@ -46,52 +46,98 @@
 
 // -------- Bank loAn Eligibility System -------:
 
+// import java.util.Scanner;
+// public class Question {
+//     public static void main(String[] args) {
+        
+//         Scanner sc = new Scanner(System.in);
+
+//         System.out.println("Enter Customer Name: ");
+//         String name = sc.nextLine();
+
+//         System.out.println("Enter Age: ");
+//         int age = sc.nextInt();
+
+//         System.out.println("Enter Monthly Salary: ");
+//         double salary = sc.nextDouble();
+
+//         System.out.println("Enter CIBIL score: ");
+//         int cibil = sc.nextInt();
+
+//         System.out.println("Enter Work EXperience (Years): ");
+//         int experience = sc.nextInt();
+
+//         if(age >= 21 && salary >= 30000 && cibil >= 750 && experience >= 2) {
+//             System.out.println("\n Loan Satus : APPROVED\n");
+
+//         if(salary >= 100000){
+//             System.out.println("Eligible Loan Amount : $50,00,000");
+//         } else if( salary >= 70000){
+//             System.out.println("Eligible Loan Amount : $30,00,000");
+//         } else if( salary >= 50000){
+//             System.out.println("Eligible Loan Amount: $20,00,000");
+//         } else {
+//             System.out.println("Eligible Loan Amount : $ 10,00,000");
+//         }
+
+//         } else {
+//             System.out.println("\nLoan Status : REJECTED\n");
+
+//             if(age < 21){
+//                 System.out.println("Reason : Age should be at least 21");
+//             } if(salary < 30000){
+//                 System.out.println("Reason : Salary is too low");
+//             } if(cibil < 750) {
+//                 System.out.println("Reason : Poor CIBIL Score");
+//             } if(experience < 2) {
+//                 System.out.println("Reason : Minimum 2 year experiene required");
+//             }
+//         }
+//         sc.close();
+
+//     }
+// }
+
+
+// College Addmission System :
+
 import java.util.Scanner;
 public class Question {
     public static void main(String[] args) {
-        
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter Customer Name: ");
+        System.out.println("Enter Student Name: ");
         String name = sc.nextLine();
 
-        System.out.println("Enter Age: ");
-        int age = sc.nextInt();
+        System.out.println("Enter PCM Percentage: ");
+        double percentage = sc.nextDouble();
 
-        System.out.println("Enter Monthly Salary: ");
-        double salary = sc.nextDouble();
+        System.out.print("Enter Entrance Rank: ");
+        int rank = sc.nextInt();
 
-        System.out.println("Enter CIBIL score: ");
-        int cibil = sc.nextInt();
+        System.out.println("Sports Quota (true/fals): ");
+        boolean sports = sc.nextBoolean();
 
-        System.out.println("Enter Work EXperience (Years): ");
-        int experience = sc.nextInt();
+        if(percentage >= 60) {
+            System.out.println("\nAdmission Status : ELIGIBLE");
 
-        if(age >= 21 && salary >= 30000 && cibil >= 750 && experience >= 2) {
-            System.out.println("\n Loan Satus : APPROVED\n");
+            if(rank <= 1000){
+                System.out.println("Branch : Computer Science");
+                System.out.println("Scholarship : 100%");
 
-        if(salary >= 100000){
-            System.out.println("Eligible Loan Amount : $50,00,000");
-        } else if( salary >= 70000){
-            System.out.println("Eligible Loan Amount : $30,00,000");
-        } else if( salary >= 50000){
-            System.out.println("Eligible Loan Amount: $20,00,000");
-        } else {
-            System.out.println("Eligible Loan Amount : $ 10,00,000");
-        }
-
-        } else {
-            System.out.println("\nLoan Status : REJECTED\n");
-
-            if(age < 21){
-                System.out.println("Reason : Age should be at least 21");
-            } if(salary < 30000){
-                System.out.println("Reason : Salary is too low");
-            } if(cibil < 750) {
-                System.out.println("Reason : Poor CIBIL Score");
-            } if(experience < 2) {
-                System.out.println("Reason : Minimum 2 year experiene required");
+            } else if(rank <= 3000) {
+                System.out.println("Branch : Information Technology");
+                System.out.println("Scholarship : 75%");
+            } else if( rank <= 6000) {
+                System.out.println("Branch : Electronics");
+                System.out.println("Scholarship  50%");
+            } else {
+                System.out.println("Branch : Mechanical");
+                System.out.println("Scholarship : 25%");
             }
+        } else {
+            System.out.println("\nAdmission Rejected");
+            System.out.println("Minimum 60& required");
         }
         sc.close();
 
