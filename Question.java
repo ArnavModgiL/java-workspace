@@ -1,4 +1,5 @@
-// Electricity Bill Question : 
+// Electricity Bill Question : ---------------------->
+
 // import java.util.Scanner;
 // public class Question {
 //     public static void main(String[] args) {
@@ -99,47 +100,101 @@
 // }
 
 
-// College Addmission System :
+//----------College Addmission System ------------:
+
+// import java.util.Scanner;
+// public class Question {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+
+//         System.out.println("Enter Student Name: ");
+//         String name = sc.nextLine();
+
+//         System.out.println("Enter PCM Percentage: ");
+//         double percentage = sc.nextDouble();
+
+//         System.out.print("Enter Entrance Rank: ");
+//         int rank = sc.nextInt();
+
+//         System.out.println("Sports Quota (true/fals): ");
+//         boolean sports = sc.nextBoolean();
+
+//         if(percentage >= 60) {
+//             System.out.println("\nAdmission Status : ELIGIBLE");
+
+//             if(rank <= 1000){
+//                 System.out.println("Branch : Computer Science");
+//                 System.out.println("Scholarship : 100%");
+
+//             } else if(rank <= 3000) {
+//                 System.out.println("Branch : Information Technology");
+//                 System.out.println("Scholarship : 75%");
+//             } else if( rank <= 6000) {
+//                 System.out.println("Branch : Electronics");
+//                 System.out.println("Scholarship  50%");
+//             } else {
+//                 System.out.println("Branch : Mechanical");
+//                 System.out.println("Scholarship : 25%");
+//             }
+//         } else {
+//             System.out.println("\nAdmission Rejected");
+//             System.out.println("Minimum 60& required");
+//         }
+//         sc.close();
+
+//     }
+// }
+
+
+
+// Airline Ticket Booking System : ------------------>
 
 import java.util.Scanner;
 public class Question {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter Student Name: ");
+        System.out.println("Passenger Name: ");
         String name = sc.nextLine();
 
-        System.out.println("Enter PCM Percentage: ");
-        double percentage = sc.nextDouble();
+        System.out.println("Age: ");
+        int age = sc.nextInt();
 
-        System.out.print("Enter Entrance Rank: ");
-        int rank = sc.nextInt();
+        System.out.println("\nTicket Class");
+        System.out.println("1. Economy");
+        System.out.println("2. Business");
 
-        System.out.println("Sports Quota (true/fals): ");
-        boolean sports = sc.nextBoolean();
+        System.out.println("Choose Class: ");
+        int choice = sc.nextInt();
 
-        if(percentage >= 60) {
-            System.out.println("\nAdmission Status : ELIGIBLE");
+        System.out.print("Are you a Student? (true/ false): ");
+        boolean student = sc.nextBoolean();
 
-            if(rank <= 1000){
-                System.out.println("Branch : Computer Science");
-                System.out.println("Scholarship : 100%");
+        double fare = 0;
 
-            } else if(rank <= 3000) {
-                System.out.println("Branch : Information Technology");
-                System.out.println("Scholarship : 75%");
-            } else if( rank <= 6000) {
-                System.out.println("Branch : Electronics");
-                System.out.println("Scholarship  50%");
-            } else {
-                System.out.println("Branch : Mechanical");
-                System.out.println("Scholarship : 25%");
-            }
+        if (choice == 1){
+            fare = 5000;
+        } else if (choice == 2) {
+            fare = 12000;
         } else {
-            System.out.println("\nAdmission Rejected");
-            System.out.println("Minimum 60& required");
+            System.out.println("Invalid Class");
+            return;
         }
-        sc.close();
 
+        if (student) {
+            fare = fare - (fare * 0.10);
+        } if( age >= 60) {
+            fare = fare - (fare * 0.20);
+        }
+
+        double gst = fare * 0.05;
+        double total = fare + gst;
+
+        System.out.println("Passenger : " + name);
+        System.out.println("Base Fare : " + fare);
+        System.out.println("GST (5%) : " + gst);
+        System.out.println("Total Fare : $" + total);
+
+        sc.close();
     }
 }
