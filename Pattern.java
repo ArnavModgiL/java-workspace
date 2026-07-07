@@ -51,7 +51,7 @@
 //     }
 // }
 
-// Number Triangle Question : 
+// Number Triangle Question :  
 
 import java.util.*;
 public class Pattern {
@@ -66,6 +66,5 @@ public class Pattern {
             System.out.println();
         }
     }
-
 }
 
