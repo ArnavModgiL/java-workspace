@@ -193,15 +193,35 @@
 
 // Reverse Number Triangle :
 
+// import java.util.*;
+// public class Pattern {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         int n = sc.nextInt();
+
+//         for(int i = 1; i<= n ; i++){
+//             for(int j = n ; j >= n - i + 1; j--){
+//                 System.out.print(j + " ");
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+
+// Character Triangle Question :
+
 import java.util.*;
 public class Pattern {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 
-        for(int i = 1; i<= n ; i++){
-            for(int j = n ; j >= n - i + 1; j--){
-                System.out.print(j + " ");
+        for(int i = 1; i<= n; i++){
+            char ch = 'A';
+
+            for(int j = 1; j <= i; j++) {
+                System.out.print(ch + " ");
+                ch++;
             }
             System.out.println();
         }
