@@ -34,7 +34,7 @@
 //     }
 // }
 
-// Inverted Triangle Question:
+// Inverted Triangle Question: --->
 
 // import java.util.*; 
 // public class Pattern {
@@ -51,7 +51,7 @@
 //     }
 // }
 
-// Number Triangle Question :  
+// Number Triangle Question :   --->
 
 // import java.util.*;
 // public class Pattern {
@@ -68,7 +68,7 @@
 //     }
 // }
 
-// Floyid's Triangle code Question :
+// Floyid's Triangle code Question : --->
 
 // import java.util.Scanner;
 // public class Pattern {
@@ -89,7 +89,7 @@
 //     }
 // }
 
-// Pyramid Question Code :
+// Pyramid Question Code : --->
 
 // import java.util.Scanner;
 // public class Pattern{
@@ -112,7 +112,7 @@
 //     }
 // }
 
-// Diamond Pattern Question : 
+// Diamond Pattern Question :  --->
 
 // import java.util.*;
 // public class Pattern {
@@ -144,7 +144,7 @@
 // }
 
 
-// Hollow Square Code : 
+// Hollow Square Code :  --->
 
 // import java.util.*;
 // public class Pattern {
@@ -166,7 +166,7 @@
 //     }
 // }
 
-// Hollow Rectangle Question : 
+// Hollow Rectangle Question : -->
 
 // import java.util.Scanner;
 // public class Pattern {
@@ -191,7 +191,7 @@
 //     }
 // }
 
-// Reverse Number Triangle :
+// Reverse Number Triangle : --->
 
 // import java.util.*;
 // public class Pattern {
@@ -208,7 +208,7 @@
 //     }
 // }
 
-// Character Triangle Question :
+// Character Triangle Question : --->
 
 // import java.util.*;
 // public class Pattern {
@@ -229,7 +229,7 @@
 // }
 
 
-// Continuouse Character Patter : 
+// Continuouse Character Patter : --->
 
 // import java.util.*;
 // public class Pattern {
@@ -250,7 +250,7 @@
 //     }
 // }
 
-// Solid Rectangle : 
+// Solid Rectangle : --->
 
 // import java.util.*;
 // public class Pattern {
@@ -269,22 +269,54 @@
 //     }
 // }
 
-// 0 - 1 Triangle Question Code : 
+// 0 - 1 Triangle Question Code :  --->
+
+// import java.util.Scanner;
+// public class Pattern {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         int n = sc.nextInt();
+
+//         for(int i = 1; i <= n ; i++){
+//             for(int j = 1; j <= i; j++){
+//                 if((i + j) % 2 == 0) {
+//                     System.out.print("1 ");
+//                 } else {
+//                     System.out.print("0 ");
+//                 }
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
 
 
-import java.util.Scanner;
+// Butterfly Pattern Question : --->
+
+import java.util.*;
 public class Pattern {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 
-        for(int i = 1; i <= n ; i++){
+        for(int i = 1; i <= n; i++) {
+            for(int j = 1 ; j<= i; j++){
+                System.out.print("*");
+            } for(int j = 1 ; j <= 2 * (n-i); j++){
+                System.out.print(" ");
+            } for(int j = 1 ; j<= i; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        for(int i = n ; i>= 1 ; i--){
             for(int j = 1; j <= i; j++){
-                if((i + j) % 2 == 0) {
-                    System.out.print("1 ");
-                } else {
-                    System.out.print("0 ");
-                }
+                System.out.print("*");
+            } for(int j = 1; j<= 2 *(n-i); j++){
+                System.out.print(" ");
+            } for(int j = 1; j<= i; j++){
+                System.out.print("*");
             }
             System.out.println();
         }
