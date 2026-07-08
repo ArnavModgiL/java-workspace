@@ -18,7 +18,7 @@
 //     }
 // }
 
-// Adding Two Numbers :
+// Adding Two Numbers : --
 
 import java.util.Scanner;
 public class Main {
