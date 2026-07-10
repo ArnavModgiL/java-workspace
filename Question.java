@@ -261,29 +261,52 @@
 
 // Amstrong Number Question Code :
 
+// import java.util.Scanner;
+// public class Question {
+//     public static boolean isArmstrong(int num) {
+//         int original = num;
+//         int sum = 0;
+
+//         while(num != 0) {
+//             int digit = num % 10;
+//             sum = sum + digit * digit * digit;
+//             num = num / 10;
+//         }
+//         return sum == original;
+//     }
+
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+
+//         int num = sc.nextInt();
+
+//         if(isArmstrong(num)) {
+//             System.out.println("Is An Armstrong No.");
+//         } else {
+//             System.out.println("Is Not Armstrong No.");
+//         }
+//     }
+// }
+
+
+// GCD Number Question : --->
+
 import java.util.Scanner;
 public class Question {
-    public static boolean isArmstrong(int num) {
-        int original = num;
-        int sum = 0;
-
-        while(num != 0) {
-            int digit = num % 10;
-            sum = sum + digit * digit * digit;
-            num = num / 10;
+    public static int gcd(int a , int b) {
+        while( b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
         }
-        return sum == original;
+        return a;
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
 
-        int num = sc.nextInt();
-
-        if(isArmstrong(num)) {
-            System.out.println("Is An Armstrong No.");
-        } else {
-            System.out.println("Is Not Armstrong No.");
-        }
+        System.out.println("GCD = " + gcd(a,b));
     }
 }
