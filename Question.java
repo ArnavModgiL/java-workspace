@@ -149,52 +149,85 @@
 
 // Airline Ticket Booking System : ------------------>
 
-import java.util.Scanner;
+// import java.util.Scanner;
+// public class Question {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+
+//         System.out.println("Passenger Name: ");
+//         String name = sc.nextLine();
+
+//         System.out.println("Age: ");
+//         int age = sc.nextInt();
+
+//         System.out.println("\nTicket Class");
+//         System.out.println("1. Economy");
+//         System.out.println("2. Business");
+
+//         System.out.println("Choose Class: ");
+//         int choice = sc.nextInt();
+
+//         System.out.print("Are you a Student? (true/ false): ");
+//         boolean student = sc.nextBoolean();
+
+//         double fare = 0;
+
+//         if (choice == 1){
+//             fare = 5000;
+//         } else if (choice == 2) {
+//             fare = 12000;
+//         } else {
+//             System.out.println("Invalid Class");
+//             return;
+//         }
+
+//         if (student) {
+//             fare = fare - (fare * 0.10);
+//         } if( age >= 60) {
+//             fare = fare - (fare * 0.20);
+//         }
+
+//         double gst = fare * 0.05;
+//         double total = fare + gst;
+
+//         System.out.println("Passenger : " + name);
+//         System.out.println("Base Fare : " + fare);
+//         System.out.println("GST (5%) : " + gst);
+//         System.out.println("Total Fare : $" + total);
+
+//         sc.close();
+//     }
+// }
+
+
+
+// Maximum of Three Number : 
+
+import java.util.*;
 public class Question {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Passenger Name: ");
-        String name = sc.nextLine();
-
-        System.out.println("Age: ");
-        int age = sc.nextInt();
-
-        System.out.println("\nTicket Class");
-        System.out.println("1. Economy");
-        System.out.println("2. Business");
-
-        System.out.println("Choose Class: ");
-        int choice = sc.nextInt();
-
-        System.out.print("Are you a Student? (true/ false): ");
-        boolean student = sc.nextBoolean();
-
-        double fare = 0;
-
-        if (choice == 1){
-            fare = 5000;
-        } else if (choice == 2) {
-            fare = 12000;
+    public static int maximum(int a, int b, int c) {
+        if(a >= b && a >= c){
+            return a;
+        } else if (b >= a && b >= c) {
+            return b;
         } else {
-            System.out.println("Invalid Class");
-            return;
+            return c;
         }
-
-        if (student) {
-            fare = fare - (fare * 0.10);
-        } if( age >= 60) {
-            fare = fare - (fare * 0.20);
-        }
-
-        double gst = fare * 0.05;
-        double total = fare + gst;
-
-        System.out.println("Passenger : " + name);
-        System.out.println("Base Fare : " + fare);
-        System.out.println("GST (5%) : " + gst);
-        System.out.println("Total Fare : $" + total);
-
-        sc.close();
     }
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+
+            System.out.print("Enter First Number : ");
+            int a = sc.nextInt();
+
+            System.out.print("Enter Second Number : ");
+            int b = sc.nextInt();
+
+            System.out.print("Enter Third Number : ");
+            int c = sc.nextInt();
+
+            int ans = maximum(a,b,c);
+            System.out.println("Largest Number = " + ans);
+        }
+
 }
