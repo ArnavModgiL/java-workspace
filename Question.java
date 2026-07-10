@@ -233,28 +233,57 @@
 
 // Prime Number Question : 
 
+// import java.util.Scanner;
+// public class Question {
+//     public static Boolean isPrime(int n) {
+//         if(n <= 1){
+//             return false;
+//         }
+//         for(int i = 2; i<= Math.sqrt(n); i++) {
+//             if(n % i == 0) {
+//                 return false;
+//             }
+//         }
+//         return true;
+//     }
+
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+
+//         int n = sc.nextInt();
+//         if(isPrime(n)) {
+//             System.out.println("Prime Number!");
+//         } else {
+//             System.out.println("Not Prime!");
+//         }
+//     }
+// }
+
+// Amstrong Number Question Code :
+
 import java.util.Scanner;
 public class Question {
-    public static Boolean isPrime(int n) {
-        if(n <= 1){
-            return false;
+    public static boolean isArmstrong(int num) {
+        int original = num;
+        int sum = 0;
+
+        while(num != 0) {
+            int digit = num % 10;
+            sum = sum + digit * digit * digit;
+            num = num / 10;
         }
-        for(int i = 2; i<= Math.sqrt(n); i++) {
-            if(n % i == 0) {
-                return false;
-            }
-        }
-        return true;
+        return sum == original;
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int n = sc.nextInt();
-        if(isPrime(n)) {
-            System.out.println("Prime Number!");
+        int num = sc.nextInt();
+
+        if(isArmstrong(num)) {
+            System.out.println("Is An Armstrong No.");
         } else {
-            System.out.println("Not Prime!");
+            System.out.println("Is Not Armstrong No.");
         }
     }
 }
