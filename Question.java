@@ -291,22 +291,43 @@
 
 // GCD Number Question : --->
 
+// import java.util.Scanner;
+// public class Question {
+//     public static int gcd(int a , int b) {
+//         while( b != 0) {
+//             int temp = b;
+//             b = a % b;
+//             a = temp;
+//         }
+//         return a;
+//     }
+
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         int a = sc.nextInt();
+//         int b = sc.nextInt();
+
+//         System.out.println("GCD = " + gcd(a,b));
+//     }
+// }
+
+// Reverse Number Question Code :
+
 import java.util.Scanner;
 public class Question {
-    public static int gcd(int a , int b) {
-        while( b != 0) {
-            int temp = b;
-            b = a % b;
-            a = temp;
+    public static int reverse(int n) {
+        int rev = 0;
+        while(n > 0) {
+            int digit = n % 10;
+            rev = rev * 10 + digit;
+            n = n / 10;
         }
-        return a;
+        return rev;
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int a = sc.nextInt();
-        int b = sc.nextInt();
-
-        System.out.println("GCD = " + gcd(a,b));
+        int n = sc.nextInt();
+        System.out.println(reverse(n));
     }
 }
