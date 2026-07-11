@@ -335,22 +335,52 @@
 
 // Factorial of a Number : 
 
+// import java.util.Scanner;
+// public class Question {
+//     public static long calcFact(int n) {
+//         long fact = 1;
+
+//         for(int i = 1; i<= n; i++) {
+//             fact = fact * i;
+//         }
+//         return fact;
+//     }
+
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         int nums = sc.nextInt();
+//         long ans = calcFact(nums);
+//         System.out.println("Factorial = " + ans);
+        
+//     }
+// }
+
+// Palindrome Number : 
+
 import java.util.Scanner;
 public class Question {
-    public static long calcFact(int n) {
-        long fact = 1;
+    public static boolean isPalindrome(int n) {
+        int original = n;
+        int reverse = 0;
+        int digit = 0;
 
-        for(int i = 1; i<= n; i++) {
-            fact = fact * i;
+        while(n > 0) {
+            digit = n % 10;
+            reverse = reverse * 10 + digit;
+            n = n / 10;
         }
-        return fact;
+        return original == n;
+
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int nums = sc.nextInt();
-        long ans = calcFact(nums);
-        System.out.println("Factorial = " + ans);
-        
+
+        if(isPalindrome(nums)) {
+            System.out.println("Palindrome Number!");
+        } else {
+            System.out.println("Not a Palindrome Number!");
+        }
     }
 }
