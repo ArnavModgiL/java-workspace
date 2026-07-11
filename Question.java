@@ -313,21 +313,44 @@
 
 // Reverse Number Question Code :
 
+// import java.util.Scanner;
+// public class Question {
+//     public static int reverse(int n) {
+//         int rev = 0;
+//         while(n > 0) {
+//             int digit = n % 10;
+//             rev = rev * 10 + digit;
+//             n = n / 10;
+//         }
+//         return rev;
+//     }
+
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         int n = sc.nextInt();
+//         System.out.println(reverse(n));
+//     }
+// }
+
+
+// Factorial of a Number : 
+
 import java.util.Scanner;
 public class Question {
-    public static int reverse(int n) {
-        int rev = 0;
-        while(n > 0) {
-            int digit = n % 10;
-            rev = rev * 10 + digit;
-            n = n / 10;
+    public static long calcFact(int n) {
+        long fact = 1;
+
+        for(int i = 1; i<= n; i++) {
+            fact = fact * i;
         }
-        return rev;
+        return fact;
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        System.out.println(reverse(n));
+        int nums = sc.nextInt();
+        long ans = calcFact(nums);
+        System.out.println("Factorial = " + ans);
+        
     }
 }
