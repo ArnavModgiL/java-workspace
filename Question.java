@@ -357,30 +357,58 @@
 
 // Palindrome Number : 
 
-import java.util.Scanner;
+// import java.util.Scanner;
+// public class Question {
+//     public static boolean isPalindrome(int n) {
+//         int original = n;
+//         int reverse = 0;
+//         int digit = 0;
+
+//         while(n > 0) {
+//             digit = n % 10;
+//             reverse = reverse * 10 + digit;
+//             n = n / 10;
+//         }
+//         return original == n;
+
+//     }
+
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         int nums = sc.nextInt();
+
+//         if(isPalindrome(nums)) {
+//             System.out.println("Palindrome Number!");
+//         } else {
+//             System.out.println("Not a Palindrome Number!");
+//         }
+//     }
+// }
+
+
+// Fibonacci Series Question :
+
+import java.util.*;
 public class Question {
-    public static boolean isPalindrome(int n) {
-        int original = n;
-        int reverse = 0;
-        int digit = 0;
+    public static void Fibonacci(int terms) {
+        if(terms <= 0) {
+            return ;
+        } 
+        int a = 0;
+        int b = 1;
 
-        while(n > 0) {
-            digit = n % 10;
-            reverse = reverse * 10 + digit;
-            n = n / 10;
+        for(int i = 1; i <= terms; i++) {
+            System.out.print(a + " ");
+            int c = a + b;
+            a = b;
+            b = c;
         }
-        return original == n;
-
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int nums = sc.nextInt();
+        Fibonacci(nums);
 
-        if(isPalindrome(nums)) {
-            System.out.println("Palindrome Number!");
-        } else {
-            System.out.println("Not a Palindrome Number!");
-        }
     }
 }
