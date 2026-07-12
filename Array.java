@@ -177,23 +177,52 @@
 
 // Average Of Array!
 
+// import java.util.Scanner;
+// public class Array {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         int n = sc.nextInt();
+
+//         int[] arr = new int[n];
+//         for(int i =0; i< n; i++){
+//             arr[i] = sc.nextInt();
+//         }
+
+//         double sum = 0;
+//         for(int i = 0; i< arr.length;i++){
+//             sum = sum + arr[i];
+//         }
+
+//         double average = (double) sum / arr.length;
+//         System.out.println("Average - " + average);
+//     }
+// }
+
+
+//Count Even and Odd Number !
+
 import java.util.Scanner;
 public class Array {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
+        int nums = sc.nextInt();
 
-        int[] arr = new int[n];
-        for(int i =0; i< n; i++){
+        int[] arr = new int[nums];
+
+        int even = 0;
+        int odd = 0;
+        for(int i = 0 ; i< nums; i++){
             arr[i] = sc.nextInt();
         }
 
-        double sum = 0;
-        for(int i = 0; i< arr.length;i++){
-            sum = sum + arr[i];
+        for(int i = 0 ; i < arr.length; i++) {
+            if(arr[i] % 2 == 0) {
+                even++;
+            } else {
+                odd++;
+            }
         }
-
-        double average = (double) sum / arr.length;
-        System.out.println("Average - " + average);
+        System.out.println("Even = " + even);
+        System.out.println("Odd = " + odd);
     }
 }
