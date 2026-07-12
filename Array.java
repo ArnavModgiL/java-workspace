@@ -151,6 +151,32 @@
 
 // Minimum Element! 
 
+// import java.util.Scanner;
+// public class Array {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         int n = sc.nextInt();
+
+//         int[] arr = new int[n];
+
+//         for(int i = 0 ; i<n; i++) {
+//             arr[i] = sc.nextInt();
+//         }
+
+//         int min = arr[0];
+
+//         for(int i = 0; i< arr.length;i++) {
+//             if(arr[i] < min) {
+//                 min = arr[i];
+//             }
+//         }
+//         System.out.println("Minimum = " + min);
+//     }
+// }
+
+
+// Average Of Array!
+
 import java.util.Scanner;
 public class Array {
     public static void main(String[] args) {
@@ -158,18 +184,16 @@ public class Array {
         int n = sc.nextInt();
 
         int[] arr = new int[n];
-
-        for(int i = 0 ; i<n; i++) {
+        for(int i =0; i< n; i++){
             arr[i] = sc.nextInt();
         }
 
-        int min = arr[0];
-
-        for(int i = 0; i< arr.length;i++) {
-            if(arr[i] < min) {
-                min = arr[i];
-            }
+        double sum = 0;
+        for(int i = 0; i< arr.length;i++){
+            sum = sum + arr[i];
         }
-        System.out.println("Minimum = " + min);
+
+        double average = (double) sum / arr.length;
+        System.out.println("Average - " + average);
     }
 }
