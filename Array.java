@@ -276,6 +276,36 @@
 
 // Check if Array is Sorted!
 
+// import java.util.Scanner;
+// public class Array {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         int n = sc.nextInt();
+
+//         int[] arr = new int[n];
+
+//         for(int i = 0; i< n; i++) {
+//             arr[i] = sc.nextInt();
+//         }
+
+//         boolean sorted = true;
+//         for(int i = 0; i< arr.length - 1; i++) {
+//             if(arr[i] > arr[i + 1]) {
+//                 sorted = false;
+//                 break;
+//             }
+//         }
+//         if(sorted) {
+//             System.out.println("Sorted!");
+//         } else {
+//             System.out.println("Not Sorted!");
+//         }
+//     }
+// }
+
+
+// count frequency of Element!
+
 import java.util.Scanner;
 public class Array {
     public static void main(String[] args) {
@@ -283,23 +313,19 @@ public class Array {
         int n = sc.nextInt();
 
         int[] arr = new int[n];
-
-        for(int i = 0; i< n; i++) {
+        for(int i = 0; i< n; i++){
             arr[i] = sc.nextInt();
         }
+        System.out.print("Enter the target! ");
+        int x = sc.nextInt();
 
-        boolean sorted = true;
-        for(int i = 0; i< arr.length - 1; i++) {
-            if(arr[i] > arr[i + 1]) {
-                sorted = false;
-                break;
+        int count = 0;
+        for(int i = 0; i< arr.length; i++) {
+            if(arr[i] == x) {
+                count ++;
             }
         }
-        if(sorted) {
-            System.out.println("Sorted!");
-        } else {
-            System.out.println("Not Sorted!");
-        }
+        System.out.println("Frequency : " + count);
     }
 }
 
