@@ -249,7 +249,7 @@
 
 // }
 
-// Copy one Array intp Another !
+// Copy one Array into Another !
 
 import java.util.Scanner;
 public class Array {
