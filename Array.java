@@ -306,6 +306,33 @@
 
 // count frequency of Element!
 
+// import java.util.Scanner;
+// public class Array {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         int n = sc.nextInt();
+
+//         int[] arr = new int[n];
+//         for(int i = 0; i< n; i++){
+//             arr[i] = sc.nextInt();
+//         }
+//         System.out.print("Enter the target! ");
+//         int x = sc.nextInt();
+
+//         int count = 0;
+//         for(int i = 0; i< arr.length; i++) {
+//             if(arr[i] == x) {
+//                 count ++;
+//             }
+//         }
+//         System.out.println("Frequency : " + count);
+//     }
+// }
+
+
+
+// Remove Duplicates Array!
+
 import java.util.Scanner;
 public class Array {
     public static void main(String[] args) {
@@ -313,19 +340,20 @@ public class Array {
         int n = sc.nextInt();
 
         int[] arr = new int[n];
-        for(int i = 0; i< n; i++){
+        for(int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
-        System.out.print("Enter the target! ");
-        int x = sc.nextInt();
 
-        int count = 0;
-        for(int i = 0; i< arr.length; i++) {
-            if(arr[i] == x) {
-                count ++;
+        int j = 0;
+        for(int i = 1; i < arr.length; i++) {
+            if(arr[i] != arr[j]) {
+                j++;
+                arr[j] = arr[i];
             }
         }
-        System.out.println("Frequency : " + count);
+
+        for(int i = 0; i <= j; i++) {
+            System.out.print(arr[i] + " ");
+        }
     }
 }
-
