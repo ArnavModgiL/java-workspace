@@ -1,5 +1,7 @@
 // Bit Manipulation Question!.
 
+// Find ODD & Even :!. 
+
 import java.util.Scanner;
 public class Bits {
     public static void main(String[] args) {
