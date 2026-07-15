@@ -59,6 +59,24 @@
 
 // ClEAR BIT QUESTION {LOGIC!};
 
+// import java.util.Scanner;
+// public class Bits {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter Number : ");
+//         int number = sc.nextInt();
+//         System.out.print("Enter Position : ");
+//         int position = sc.nextInt();
+
+//         int bitMask = 1 << position;
+//         int result = number & (~bitMask);
+//         System.out.println(result);
+//     }
+// }
+
+
+// UPDATE BIT QUESTION {LOGIC!};
+
 import java.util.Scanner;
 public class Bits {
     public static void main(String[] args) {
@@ -68,8 +86,15 @@ public class Bits {
         System.out.print("Enter Position : ");
         int position = sc.nextInt();
 
+        int newBit = 1;
+
         int bitMask = 1 << position;
-        int result = number & (~bitMask);
-        System.out.println(result);
+        if(newBit == 0) {
+            int result = number & (~bitMask);
+            System.out.println(result);
+        } else {
+            int result = number | bitMask;
+            System.out.println(result);
+        }
     }
 }
