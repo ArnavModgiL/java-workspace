@@ -77,24 +77,47 @@
 
 // UPDATE BIT QUESTION {LOGIC!};
 
+// import java.util.Scanner;
+// public class Bits {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter Number : ");
+//         int number = sc.nextInt();
+//         System.out.print("Enter Position : ");
+//         int position = sc.nextInt();
+
+//         int newBit = 1;
+
+//         int bitMask = 1 << position;
+//         if(newBit == 0) {
+//             int result = number & (~bitMask);
+//             System.out.println(result);
+//         } else {
+//             int result = number | bitMask;
+//             System.out.println(result);
+//         }
+//     }
+// }
+
+
+// Check Even or ODD BY USING MANIPLUATIONS : 
+
 import java.util.Scanner;
 public class Bits {
+    public static boolean isEven(int n) {
+        return (n & 1) == 0;
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter Number : ");
-        int number = sc.nextInt();
-        System.out.print("Enter Position : ");
-        int position = sc.nextInt();
 
-        int newBit = 1;
+        System.out.print("Enter a Number: ");
+        int n = sc.nextInt();
 
-        int bitMask = 1 << position;
-        if(newBit == 0) {
-            int result = number & (~bitMask);
-            System.out.println(result);
+        if(isEven(n)) {
+            System.out.println("Even Number!");
         } else {
-            int result = number | bitMask;
-            System.out.println(result);
+            System.out.println("ODD NUmber!");
         }
     }
 }
