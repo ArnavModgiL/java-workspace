@@ -2,18 +2,38 @@
 
 // Find ODD & Even :!. 
 
+// import java.util.Scanner;
+// public class Bits {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter Number : ");
+//         int n = sc.nextInt();
+
+//         if((n & 1) == 0) {
+//             System.out.println("Even.");
+//         } else {
+//             System.out.println("Odd.");
+//         }
+//     }  
+// }
+
+
+// GIT BIT QUESTION (LOGIC!):
+
 import java.util.Scanner;
 public class Bits {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter Number : ");
-        int n = sc.nextInt();
+        int nums = sc.nextInt();
+        System.out.print("Enter Position : ");
+        int position = sc.nextInt();
 
-        if((n & 1) == 0) {
-            System.out.println("Even.");
+        int bitMask = 1 << position;
+        if((nums & bitMask) == 0) {
+            System.out.println("Bit is 0.");
         } else {
-            System.out.println("Odd.");
+            System.out.println("Bit is 1.");
         }
     }
-    
 }
