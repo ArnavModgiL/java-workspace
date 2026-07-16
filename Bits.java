@@ -102,22 +102,49 @@
 
 // Check Even or ODD BY USING MANIPLUATIONS : 
 
+// import java.util.Scanner;
+// public class Bits {
+//     public static boolean isEven(int n) {
+//         return (n & 1) == 0;
+//     }
+
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+
+//         System.out.print("Enter a Number: ");
+//         int n = sc.nextInt();
+
+//         if(isEven(n)) {
+//             System.out.println("Even Number!");
+//         } else {
+//             System.out.println("ODD NUmber!");
+//         }
+//     }
+// }
+
+// Find the Ith BIT (GET BIT) !.
+
 import java.util.Scanner;
 public class Bits {
-    public static boolean isEven(int n) {
-        return (n & 1) == 0;
+    public static int getBit(int number, int position) {
+        int bitMask = 1 << position;
+
+        if((number & bitMask) == 0) {
+            return 0;
+        } else {
+            return 1;
+        }
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter a Number: ");
-        int n = sc.nextInt();
+        System.out.print("Enter Number : ");
+        int number = sc.nextInt();
 
-        if(isEven(n)) {
-            System.out.println("Even Number!");
-        } else {
-            System.out.println("ODD NUmber!");
-        }
+        System.out.print("Enter Bit Position : ");
+        int position = sc.nextInt();
+
+        System.out.println("Bit = " + getBit(number, position));
     }
 }
