@@ -124,27 +124,49 @@
 
 // Find the Ith BIT (GET BIT) !.
 
+// import java.util.Scanner;
+// public class Bits {
+//     public static int getBit(int number, int position) {
+//         int bitMask = 1 << position;
+
+//         if((number & bitMask) == 0) {
+//             return 0;
+//         } else {
+//             return 1;
+//         }
+//     }
+
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+
+//         System.out.print("Enter Number : ");
+//         int number = sc.nextInt();
+
+//         System.out.print("Enter Bit Position : ");
+//         int position = sc.nextInt();
+
+//         System.out.println("Bit = " + getBit(number, position));
+//     }
+// }
+
+
+// SET THE Ith Bit ! 
+
 import java.util.Scanner;
 public class Bits {
-    public static int getBit(int number, int position) {
+    public static int setBit(int number, int position) {
         int bitMask = 1 << position;
-
-        if((number & bitMask) == 0) {
-            return 0;
-        } else {
-            return 1;
-        }
+        return number | bitMask;
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
         System.out.print("Enter Number : ");
         int number = sc.nextInt();
-
-        System.out.print("Enter Bit Position : ");
+        System.out.print("Enter Position : ");
         int position = sc.nextInt();
 
-        System.out.println("Bit = " + getBit(number, position));
+        System.out.println("UPDATED NUMBER = " + setBit(number, position));
+
     }
 }
