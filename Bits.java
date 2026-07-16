@@ -174,24 +174,49 @@
 
 // Check if Number is Power of 2 - -
 
+// import java.util.Scanner;
+// public class Bits {
+//     public static boolean isPowerOfTwo(int n) {
+//         if(n <= 0) {
+//             return false;
+//         } return (n & (n - 1)) == 0;
+//     }
+
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+
+//         System.out.print("Enter Number ! ");
+//         int n = sc.nextInt();
+
+//         if(isPowerOfTwo(n)) {
+//             System.out.println("Power of 2");
+//         } else {
+//             System.out.println("Not a Power of 2.");
+//         }
+//     }
+// }
+
+
+// Count Set Bits !
+
 import java.util.Scanner;
 public class Bits {
-    public static boolean isPowerOfTwo(int n) {
-        if(n <= 0) {
-            return false;
-        } return (n & (n - 1)) == 0;
+    public static int countSetBits(int n) {
+        int count = 0;
+        while(n > 0) {
+            count = count + (n & 1);
+            n = n >> 1;
+        }
+        return count;
     }
+
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter Number ! ");
+        System.out.print("Enter Number : ");
         int n = sc.nextInt();
 
-        if(isPowerOfTwo(n)) {
-            System.out.println("Power of 2");
-        } else {
-            System.out.println("Not a Power of 2.");
-        }
+        System.out.println("Set Bits = " + countSetBits(n));
     }
 }
