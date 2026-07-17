@@ -1,6 +1,6 @@
 // Bit Manipulation Question!. [#Important!]
 
-// Find ODD & Even :!. 
+// Find ODD & Even :!.  
 
 // import java.util.Scanner;
 // public class Bits {
