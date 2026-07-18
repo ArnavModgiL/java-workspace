@@ -44,18 +44,38 @@
 
 // Sum of First N Number ! 
 
+// import java.util.Scanner;
+// public class Recursion {
+//     public static int sum(int n){
+//         if(n == 0)
+//             return 0;
+//         return n + sum(n - 1);
+//     }
+
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter N: ");
+//         int n = sc.nextInt();
+//         System.out.println("Sum = "+ sum(n));
+//     }
+// }
+
+// Factorial Question !
+
 import java.util.Scanner;
 public class Recursion {
-    public static int sum(int n){
-        if(n == 0)
-            return 0;
-        return n + sum(n - 1);
+    public static int fact(int n){
+        if(n == 0 || n == 1){
+            return 1;
+        }
+        return n * fact(n - 1);
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter N: ");
         int n = sc.nextInt();
-        System.out.println("Sum = "+ sum(n));
+        int result = fact(n);
+        System.out.print("Factorial = " + result);
     }
 }
