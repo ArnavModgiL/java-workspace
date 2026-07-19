@@ -144,22 +144,43 @@
 
 // Count Digits >
 
+// import java.util.Scanner;
+// public class Recursion {
+//     static int count(int n){
+//         if(n == 0)
+//             return 0;
+
+//         return 1 + count(n / 10);
+//     }
+//     public static void main(String[] args){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter Number : ");
+//         int n = sc.nextInt();
+//         if(n == 0){
+//             System.out.println(1);
+//         } else {
+//             System.out.println(count(Math.abs(n)));
+//         }
+//     }
+// }
+
+
+// Reverse String!
+
 import java.util.Scanner;
 public class Recursion {
-    static int count(int n){
-        if(n == 0)
-            return 0;
-
-        return 1 + count(n / 10);
+    public static void reverse(String str , int index){
+        if(index < 0){
+            return ;
+        } System.out.print(str.charAt(index));
+        reverse(str, index - 1);
     }
+
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter Number : ");
-        int n = sc.nextInt();
-        if(n == 0){
-            System.out.println(1);
-        } else {
-            System.out.println(count(Math.abs(n)));
-        }
+
+        System.out.print("Enter String : " );
+        String str = sc.nextLine();
+        reverse(str , str.length() - 1);
     }
 }
