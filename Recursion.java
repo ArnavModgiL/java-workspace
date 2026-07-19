@@ -167,20 +167,46 @@
 
 // Reverse String!
 
+// import java.util.Scanner;
+// public class Recursion {
+//     public static void reverse(String str , int index){
+//         if(index < 0){
+//             return ;
+//         } System.out.print(str.charAt(index));
+//         reverse(str, index - 1);
+//     }
+
+//     public static void main(String[] args){
+//         Scanner sc = new Scanner(System.in);
+
+//         System.out.print("Enter String : " );
+//         String str = sc.nextLine();
+//         reverse(str , str.length() - 1);
+//     }
+// }
+
+
+// check Palindrome :
+
 import java.util.Scanner;
 public class Recursion {
-    public static void reverse(String str , int index){
-        if(index < 0){
-            return ;
-        } System.out.print(str.charAt(index));
-        reverse(str, index - 1);
-    }
 
+    static boolean palindrome(String str, int start , int end){
+        if(start >= end){
+            return true;
+        } if(str.charAt(start) != str.charAt(end)){
+            return false;
+        } return palindrome(str, start + 1, end - 1);
+    }
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-
-        System.out.print("Enter String : " );
+        System.out.print("Enter String:  ");
         String str = sc.nextLine();
-        reverse(str , str.length() - 1);
+
+        if(palindrome(str, 0, str.length() - 1)){
+            System.out.println("Palindrome");
+        } else {
+            System.out.println("Not Palindrome");
+        }
     }
 }
