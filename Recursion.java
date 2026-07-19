@@ -188,25 +188,55 @@
 
 // check Palindrome :
 
+// import java.util.Scanner;
+// public class Recursion {
+
+//     static boolean palindrome(String str, int start , int end){
+//         if(start >= end){
+//             return true;
+//         } if(str.charAt(start) != str.charAt(end)){
+//             return false;
+//         } return palindrome(str, start + 1, end - 1);
+//     }
+//     public static void main(String[] args){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter String:  ");
+//         String str = sc.nextLine();
+
+//         if(palindrome(str, 0, str.length() - 1)){
+//             System.out.println("Palindrome");
+//         } else {
+//             System.out.println("Not Palindrome");
+//         }
+//     }
+// }
+
+
+// Power Question Recursion :
+
 import java.util.Scanner;
 public class Recursion {
+    public static long power(long x, long n){
+        if(n == 0){
+            return 1;
+        }
+        long half = power(x , n / 2);
 
-    static boolean palindrome(String str, int start , int end){
-        if(start >= end){
-            return true;
-        } if(str.charAt(start) != str.charAt(end)){
-            return false;
-        } return palindrome(str, start + 1, end - 1);
+        if(n % 2 == 0){
+            return half * half;
+        } else {
+            return x * half * half;
+        }
     }
+
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter String:  ");
-        String str = sc.nextLine();
+        System.out.print("Enter Power ~ N: ");
+        int n = sc.nextInt();
+        System.out.print("Enter x: ");
+        int x = sc.nextInt();
+        long ans = (long) power(x, n);
+        System.out.println(ans);
 
-        if(palindrome(str, 0, str.length() - 1)){
-            System.out.println("Palindrome");
-        } else {
-            System.out.println("Not Palindrome");
-        }
     }
 }
