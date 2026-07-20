@@ -291,23 +291,48 @@
 
 // First and Last inDEX OF THE sTRING!. --:
 
+// import java.util.Scanner;
+// public class Recursion {
+//     static void printFirstLast(String str, int index) {
+//         if(index == str.length()) {
+//             return ;
+//         } if(index == 0) {
+//             System.out.println("First Character : " + str.charAt(index));
+//         } if(index == str.length() - 1) {
+//             System.out.println("Last Character : " + str.charAt(index));
+//         }
+
+//         printFirstLast(str,index + 1);
+//     }
+//     public static void main(String[] args){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter String: ");
+//         String str = sc.nextLine();
+//         printFirstLast(str,0);
+//     }
+// }
+
+
+/*    or     */ 
+
+
 import java.util.Scanner;
 public class Recursion {
-    static void printFirstLast(String str, int index) {
-        if(index == str.length()) {
-            return ;
-        } if(index == 0) {
-            System.out.println("First Character : " + str.charAt(index));
-        } if(index == str.length() - 1) {
-            System.out.println("Last Character : " + str.charAt(index));
+    static void solve(String str, int i){
+        if(i == str.length()) {
+            return;
+        } if(i == 0){
+            System.out.print(str.charAt(i));
+        } if(i == str.length() - 1) {
+            System.out.print(str.charAt(i));
         }
 
-        printFirstLast(str,index + 1);
+        solve(str, i+1);
     }
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter String: ");
         String str = sc.nextLine();
-        printFirstLast(str,0);
+        solve(str,0);
     }
 }
