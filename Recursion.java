@@ -214,29 +214,53 @@
 
 // Power Question Recursion :
 
+// import java.util.Scanner;
+// public class Recursion {
+//     public static long power(long x, long n){
+//         if(n == 0){
+//             return 1;
+//         }
+//         long half = power(x , n / 2);
+
+//         if(n % 2 == 0){
+//             return half * half;
+//         } else {
+//             return x * half * half;
+//         }
+//     }
+
+//     public static void main(String[] args){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter Power ~ N: ");
+//         int n = sc.nextInt();
+//         System.out.print("Enter x: ");
+//         int x = sc.nextInt();
+//         long ans = (long) power(x, n);
+//         System.out.println(ans);
+
+//     }
+// }
+
+
+// Intermidate Question ! =-> TOWER OF HANOI CODE!
+
 import java.util.Scanner;
 public class Recursion {
-    public static long power(long x, long n){
-        if(n == 0){
-            return 1;
+    public static void tower(int n, char source, char helper, char destination){
+        if(n == 1){
+            System.out.println("Move Disk 1 From " + source + " to " + destination);
+            return;
         }
-        long half = power(x , n / 2);
-
-        if(n % 2 == 0){
-            return half * half;
-        } else {
-            return x * half * half;
-        }
+        tower(n - 1,source,destination,helper);
+        System.out.println("Move Disk " + n + " From " + source + " to " + destination);
+        tower(n - 1,helper,source,destination);
     }
 
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter Power ~ N: ");
-        int n = sc.nextInt();
-        System.out.print("Enter x: ");
-        int x = sc.nextInt();
-        long ans = (long) power(x, n);
-        System.out.println(ans);
+        System.out.print("Enter Number of Disks : ");
+        int n  = sc.nextInt();
+        tower(n,'A','B','C');
 
     }
 }
