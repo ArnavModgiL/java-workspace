@@ -244,23 +244,46 @@
 
 // Intermidate Question ! =-> TOWER OF HANOI CODE!
 
+// import java.util.Scanner;
+// public class Recursion {
+//     public static void tower(int n, char source, char helper, char destination){
+//         if(n == 1){
+//             System.out.println("Move Disk 1 From " + source + " to " + destination);
+//             return;
+//         }
+//         tower(n - 1,source,destination,helper);
+//         System.out.println("Move Disk " + n + " From " + source + " to " + destination);
+//         tower(n - 1,helper,source,destination);
+//     }
+
+//     public static void main(String[] args){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter Number of Disks : ");
+//         int n  = sc.nextInt();
+//         tower(n,'A','B','C');
+
+//     }
+// }
+
+// Reverse a String [Interview Level!]:
+
 import java.util.Scanner;
 public class Recursion {
-    public static void tower(int n, char source, char helper, char destination){
-        if(n == 1){
-            System.out.println("Move Disk 1 From " + source + " to " + destination);
-            return;
+    public static void reverse(String str, int index) {
+        if(index < 0){
+            return; 
         }
-        tower(n - 1,source,destination,helper);
-        System.out.println("Move Disk " + n + " From " + source + " to " + destination);
-        tower(n - 1,helper,source,destination);
+
+        System.out.print(str.charAt(index));
+
+        reverse(str,index - 1);
     }
 
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter Number of Disks : ");
-        int n  = sc.nextInt();
-        tower(n,'A','B','C');
+        System.out.print("Enter Value: ");
+        String str = sc.nextLine();
 
+        reverse(str,str.length()-1);
     }
 }
