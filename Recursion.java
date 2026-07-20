@@ -267,23 +267,48 @@
 
 // Reverse a String [Interview Level!]:
 
+// import java.util.Scanner;
+// public class Recursion {
+//     public static void reverse(String str, int index) {
+//         if(index < 0){
+//             return; 
+//         }
+
+//         System.out.print(str.charAt(index));
+
+//         reverse(str,index - 1);
+//     }
+
+//     public static void main(String[] args){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter Value: ");
+//         String str = sc.nextLine();
+
+//         reverse(str,str.length()-1);
+//     }
+// }
+
+
+// First and Last inDEX OF THE sTRING!. --:
+
 import java.util.Scanner;
 public class Recursion {
-    public static void reverse(String str, int index) {
-        if(index < 0){
-            return; 
+    static void printFirstLast(String str, int index) {
+        if(index == str.length()) {
+            return ;
+        } if(index == 0) {
+            System.out.println("First Character : " + str.charAt(index));
+        } if(index == str.length() - 1) {
+            System.out.println("Last Character : " + str.charAt(index));
         }
 
-        System.out.print(str.charAt(index));
+        printFirstLast(str,index + 1);
 
-        reverse(str,index - 1);
     }
-
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter Value: ");
+        System.out.print("Enter String: ");
         String str = sc.nextLine();
-
-        reverse(str,str.length()-1);
+        printFirstLast(str,0);
     }
 }
