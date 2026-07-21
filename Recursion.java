@@ -365,27 +365,29 @@
 
 // Move All x to Last!.
 
-import java.util.Scanner;
-public class Recursion {
-    public static void moveX(String str, int index, int count, String newString) {
-        if(index == str.length()) {
-            for(int i = 0; i<count;i++){
-                newString = newString + 'x';
-            }
-            System.out.println(newString);
-            return;
-        }
-        char currentChar = str.charAt(index);
-        if(currentChar == 'x') {
-            moveX(str,index+1,count+1,newString);
-        } else {
-            moveX(str,index+1,count,newString + currentChar);
-        }
-    }
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter String! ");
-        String str = sc.nextLine();
-        moveX(str,0,0,"");
-    }
-}
+// import java.util.Scanner;
+// public class Recursion {
+//     public static void moveX(String str, int index, int count, String newString) {
+//         if(index == str.length()) {
+//             for(int i = 0; i<count;i++){
+//                 newString = newString + 'x';
+//             }
+//             System.out.println(newString);
+//             return;
+//         }
+//         char currentChar = str.charAt(index);
+//         if(currentChar == 'x') {
+//             moveX(str,index+1,count+1,newString);
+//         } else {
+//             moveX(str,index+1,count,newString + currentChar);
+//         }
+//     }
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter String! ");
+//         String str = sc.nextLine();
+//         moveX(str,0,0,"");
+//     }
+// }
+
+// 
