@@ -316,23 +316,48 @@
 /*    or     */ 
 
 
+// import java.util.Scanner;
+// public class Recursion {
+//     static void solve(String str, int i){
+//         if(i == str.length()) {
+//             return;
+//         } if(i == 0){
+//             System.out.print(str.charAt(i));
+//         } if(i == str.length() - 1) {
+//             System.out.print(str.charAt(i));
+//         }
+
+//         solve(str, i+1);
+//     }
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter String: ");
+//         String str = sc.nextLine();
+//         solve(str,0);
+//     }
+// }
+
+// Check if the Array is Sorted or Not !
+
 import java.util.Scanner;
 public class Recursion {
-    static void solve(String str, int i){
-        if(i == str.length()) {
-            return;
-        } if(i == 0){
-            System.out.print(str.charAt(i));
-        } if(i == str.length() - 1) {
-            System.out.print(str.charAt(i));
-        }
-
-        solve(str, i+1);
+    static boolean isSorted(int[] arr, int index) {
+        if(index == arr.length - 1) {
+            return true;
+        } if(arr[index] > arr[index + 1]) {
+            return false;
+        } return isSorted(arr,index + 1);
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter String: ");
-        String str = sc.nextLine();
-        solve(str,0);
+        System.out.print("Enter Size of arrary : ");
+        int n = sc.nextInt();
+        System.out.println("Enter array elements: ");
+
+        int [] arr = new int[n];
+        for(int i = 0; i < arr.length; i++){
+            arr[i] = sc.nextInt();
+        }
+        System.out.println(isSorted(arr,0));
     }
 }
