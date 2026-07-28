@@ -358,3 +358,67 @@
 
 
 // 2D Array : --:>
+
+
+// Matrix Multiplication : -:
+
+import java.util.Scanner;
+public class Array {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter R1: ");
+        int r1 = sc.nextInt();
+        System.out.print("Enter C1: ");
+        int c1 = sc.nextInt();
+
+        int[][] A = new int[r1][c1];
+
+        for(int i = 0; i<r1; i++){
+            for(int j = 0 ; j <c1;j++){
+                A[i][j] = sc.nextInt();
+            }
+        }
+
+        // input 2 second Array!.
+
+        System.out.print("Enter R2: ");
+        int r2 = sc.nextInt();
+        System.out.print("Enter C2: ");
+        int c2 = sc.nextInt();
+
+
+         if(c1 != r2) {
+
+            System.out.println("Matrix Multiplication Not Possible");
+
+            return;
+        }
+
+        int[][] B = new int[r2][c2];
+
+        for(int i = 0; i<r2; i++){
+            for(int j = 0; j<c2;j++){
+                B[i][j] = sc.nextInt();
+            }
+        }
+
+        int[][] result = new int[c1][r2];
+        for(int i = 0 ; i<c1; i++){
+            for(int j = 0 ; j < r2;j++){
+                for(int k = 0; k < r1; k++){
+                    result[i][j] += A[i][k] * B[k][j];
+                }
+            }
+
+        }
+        System.out.println("\nResult : ->");
+
+            for(int i = 0; i<c1; i++){
+                for(int j = 0; j < r2; j++){
+                    System.out.print(result[i][j] + " ");
+                }
+                System.out.println();
+            }
+        sc.close();
+    }
+}
