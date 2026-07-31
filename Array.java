@@ -441,6 +441,48 @@
 
 // Maximum and Minimum in 2D Matrix!
 
+// import java.util.Scanner;
+// public class Array {
+//     public static void main(String[] args){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter N: ");
+//         int n = sc.nextInt();
+//         System.out.print("Enter M: ");
+//         int m = sc.nextInt();
+
+//         int[][] arr = new int[n][m];
+//         for(int i = 0; i<n;i++){
+//             for(int j = 0; j<m; j++){
+//                 arr[i][j] = sc.nextInt();
+//             }
+//         }
+
+//         int max = arr[0][0];
+//         int min = arr[0][0];
+
+//         for(int i = 0; i<n;i++){
+//             for(int j=0; j<m;j++){
+//                 if(arr[i][j] > max){
+//                     max = arr[i][j];
+//                 }
+//             }
+//         }
+
+//         for(int i = 0; i<n; i++){
+//             for(int j = 0; j<m;j++){
+//                 if(arr[i][j] < min){
+//                     min = arr[i][j];
+//                 }
+//             }
+//         }
+
+//         System.out.println("Maximun is " + max);
+//         System.out.println("Minimum is " + min);
+//     }
+// }
+
+// Find Positive & Negative & Even & Odd in 2D Matrix!
+
 import java.util.Scanner;
 public class Array {
     public static void main(String[] args){
@@ -451,32 +493,37 @@ public class Array {
         int m = sc.nextInt();
 
         int[][] arr = new int[n][m];
+
         for(int i = 0; i<n;i++){
             for(int j = 0; j<m; j++){
                 arr[i][j] = sc.nextInt();
             }
         }
 
-        int max = arr[0][0];
-        int min = arr[0][0];
-
-        for(int i = 0; i<n;i++){
-            for(int j=0; j<m;j++){
-                if(arr[i][j] > max){
-                    max = arr[i][j];
-                }
-            }
-        }
+        int even = 0;
+        int odd = 0;
+        int positive = 0;
+        int negative = 0;
 
         for(int i = 0; i<n; i++){
-            for(int j = 0; j<m;j++){
-                if(arr[i][j] < min){
-                    min = arr[i][j];
+            for(int j = 0; j<m; j++){
+                int value = arr[i][j];
+                if(value % 2 == 0){
+                    even++;
+                } else {
+                    odd++;
+                }
+                if(value > 0){
+                    positive++;
+                } else {
+                    negative++;
                 }
             }
         }
 
-        System.out.println("Maximun is " + max);
-        System.out.println("Minimum is " + min);
+        System.out.println("Even Number : " + even);
+        System.out.println("Odd Number : " + odd);
+        System.out.println("Positive number: " + positive);
+        System.out.println("Negative Number: " + negative);
     }
 }
