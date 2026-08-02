@@ -483,47 +483,86 @@
 
 // Find Positive & Negative & Even & Odd in 2D Matrix!
 
+// import java.util.Scanner;
+// public class Array {
+//     public static void main(String[] args){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter N: ");
+//         int n = sc.nextInt();
+//         System.out.print("Enter M: ");
+//         int m = sc.nextInt();
+
+//         int[][] arr = new int[n][m];
+
+//         for(int i = 0; i<n;i++){
+//             for(int j = 0; j<m; j++){
+//                 arr[i][j] = sc.nextInt();
+//             }
+//         }
+
+//         int even = 0;
+//         int odd = 0;
+//         int positive = 0;
+//         int negative = 0;
+
+//         for(int i = 0; i<n; i++){
+//             for(int j = 0; j<m; j++){
+//                 int value = arr[i][j];
+//                 if(value % 2 == 0){
+//                     even++;
+//                 } else {
+//                     odd++;
+//                 }
+//                 if(value > 0){
+//                     positive++;
+//                 } else {
+//                     negative++;
+//                 }
+//             }
+//         }
+
+//         System.out.println("Even Number : " + even);
+//         System.out.println("Odd Number : " + odd);
+//         System.out.println("Positive number: " + positive);
+//         System.out.println("Negative Number: " + negative);
+//     }
+// }
+
+
+// Row wise maxSum !
+
 import java.util.Scanner;
 public class Array {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter N: ");
         int n = sc.nextInt();
         System.out.print("Enter M: ");
         int m = sc.nextInt();
 
-        int[][] arr = new int[n][m];
-
-        for(int i = 0; i<n;i++){
-            for(int j = 0; j<m; j++){
-                arr[i][j] = sc.nextInt();
-            }
-        }
-
-        int even = 0;
-        int odd = 0;
-        int positive = 0;
-        int negative = 0;
+        int[][] matrix = new int[n][m];
 
         for(int i = 0; i<n; i++){
-            for(int j = 0; j<m; j++){
-                int value = arr[i][j];
-                if(value % 2 == 0){
-                    even++;
-                } else {
-                    odd++;
-                }
-                if(value > 0){
-                    positive++;
-                } else {
-                    negative++;
-                }
+            for(int j = 0; j < m; j++){
+                matrix[i][j] = sc.nextInt();
             }
         }
 
-        System.out.println("Even Number : " + even);
-        System.out.println("Odd Number : " + odd);
-        System.out.println("Positive number: " + positive);
-        System.out.println("Negative Number: " + negative);
+        int maxSum = Integer.MIN_VALUE;
+        int maxRow = -1;
+
+        for(int i = 0; i<matrix.length; i++){
+            int sum = 0;
+            for(int j = 0; j < matrix[0].length; j++){
+                sum = sum + matrix[i][j];
+            }
+
+            if(sum > maxSum) {
+                maxSum = sum;
+                maxRow = i;
+            }
+        }
+        System.out.println("MaxSum is : " + maxSum);
+        System.out.println("MaxRow is : " + maxRow);
     }
 }
