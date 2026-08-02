@@ -610,6 +610,37 @@
 
 // Boundary Element!
 
+// import java.util.Scanner;
+// public class Array {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter N: ");
+//         int n = sc.nextInt();
+//         System.out.print("Enter M: ");
+//         int m = sc.nextInt();
+
+//         int[][] matrix = new int [n][m];
+
+//         for(int i = 0; i < n; i++){
+//             for(int j = 0; j <m; j++) {
+//                 matrix[i][j] = sc.nextInt();
+//             }
+//         }
+
+//         for(int i = 0; i < matrix.length; i++){
+//             for(int j = 0; j < matrix[0].length; j++) {
+//                 if(i == 0 || 
+//                     i == matrix.length -1  ||
+//                      j == 0 || j == matrix[i].length-1) {
+//                     System.out.println("Boundary Element: " + matrix[i][j] + " ");
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// count occurence of Given Element! 
+
 import java.util.Scanner;
 public class Array {
     public static void main(String[] args) {
@@ -619,22 +650,24 @@ public class Array {
         System.out.print("Enter M: ");
         int m = sc.nextInt();
 
-        int[][] matrix = new int [n][m];
-
+        int[][] matrix = new int[n][m];
+        
         for(int i = 0; i < n; i++){
-            for(int j = 0; j <m; j++) {
+            for(int j = 0; j < m; j++) {
                 matrix[i][j] = sc.nextInt();
             }
         }
 
-        for(int i = 0; i < matrix.length; i++){
-            for(int j = 0; j < matrix[0].length; j++) {
-                if(i == 0 || 
-                    i == matrix.length -1  ||
-                     j == 0 || j == matrix[i].length-1) {
-                    System.out.println("Boundary Element: " + matrix[i][j] + " ");
-                }
+        System.out.print("Enter X: ");
+        int target = sc.nextInt();
+        int count = 0;
+
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < m; j++){
+                if(matrix[i][j] == target)
+                    count++;
             }
         }
+        System.out.println("Occurrence = " + count);
     }
 }
