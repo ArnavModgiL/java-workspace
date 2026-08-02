@@ -531,6 +531,46 @@
 
 // Row wise maxSum !
 
+// import java.util.Scanner;
+// public class Array {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter N: ");
+//         int n = sc.nextInt();
+//         System.out.print("Enter M: ");
+//         int m = sc.nextInt();
+
+//         int[][] matrix = new int[n][m];
+
+//         for(int i = 0; i<n; i++){
+//             for(int j = 0; j < m; j++){
+//                 matrix[i][j] = sc.nextInt();
+//             }
+//         }
+
+//         int maxSum = Integer.MIN_VALUE;
+//         int maxRow = -1;
+
+//         for(int i = 0; i<matrix.length; i++){
+//             int sum = 0;
+//             for(int j = 0; j < matrix[0].length; j++){
+//                 sum = sum + matrix[i][j];
+//             }
+
+//             if(sum > maxSum) {
+//                 maxSum = sum;
+//                 maxRow = i;
+//             }
+//         }
+//         System.out.println("MaxSum is : " + maxSum);
+//         System.out.println("MaxRow is : " + maxRow);
+//     }
+// }
+
+
+// Column wise Max!
+
+
 import java.util.Scanner;
 public class Array {
     public static void main(String[] args) {
@@ -549,20 +589,20 @@ public class Array {
         }
 
         int maxSum = Integer.MIN_VALUE;
-        int maxRow = -1;
+        int maxCol = -1;
 
-        for(int i = 0; i<matrix.length; i++){
+        for(int j = 0; j < matrix[0].length; j++){
             int sum = 0;
-            for(int j = 0; j < matrix[0].length; j++){
+            for(int i = 0; i < matrix.length; i++){
                 sum = sum + matrix[i][j];
             }
 
-            if(sum > maxSum) {
+            if(sum > maxSum){
                 maxSum = sum;
-                maxRow = i;
+                maxCol = j;
             }
         }
-        System.out.println("MaxSum is : " + maxSum);
-        System.out.println("MaxRow is : " + maxRow);
+        System.out.println("MaxSum is " + maxSum);
+        System.out.println("MaxCol is " + maxCol);
     }
 }
