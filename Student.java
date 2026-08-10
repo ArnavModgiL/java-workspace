@@ -31,20 +31,36 @@
 //     }
 // }
 
+// class Student {
+//     String company;
+//     String model;
+//     double price;
+
+//     public static void main(String[] args) {
+//         Student m1 = new Student();
+
+//         m1.company = "Samsung";
+//         m1.model = "Galaxy S24";
+//         m1.price = 70000;
+
+//         System.out.println("Company: " + m1.company);
+//         System.out.println("Model: " + m1.model);
+//         System.out.println("Price: " + m1.price);
+//     }
+// }
+
+
 class Student {
-    String company;
-    String model;
-    double price;
+    String Employee;
+    double salary;
 
     public static void main(String[] args) {
-        Student m1 = new Student();
+        Student s1 = new Student();
 
-        m1.company = "Samsung";
-        m1.model = "Galaxy S24";
-        m1.price = 70000;
+        s1.Employee = " Arnav";
+        s1.salary = 70000;
 
-        System.out.println("Company: " + m1.company);
-        System.out.println("Model: " + m1.model);
-        System.out.println("Price: " + m1.price);
+        System.out.println("Employee: " + s1.Employee);
+        System.out.println("Salary: " + s1.salary );
     }
 }
