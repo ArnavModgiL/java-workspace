@@ -641,33 +641,58 @@
 
 // count occurence of Given Element! 
 
+// import java.util.Scanner;
+// public class Array {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter N: ");
+//         int n = sc.nextInt();
+//         System.out.print("Enter M: ");
+//         int m = sc.nextInt();
+
+//         int[][] matrix = new int[n][m];
+        
+//         for(int i = 0; i < n; i++){
+//             for(int j = 0; j < m; j++) {
+//                 matrix[i][j] = sc.nextInt();
+//             }
+//         }
+
+//         System.out.print("Enter X: ");
+//         int target = sc.nextInt();
+//         int count = 0;
+
+//         for(int i = 0; i < n; i++){
+//             for(int j = 0; j < m; j++){
+//                 if(matrix[i][j] == target)
+//                     count++;
+//             }
+//         }
+//         System.out.println("Occurrence = " + count);
+//     }
+// }
+
+// Print All the Permutation Of String!
+
 import java.util.Scanner;
 public class Array {
+
+    public static void permutation(String str, String ans) {
+        if(str.length() == 0) {
+            System.out.println(ans);
+            return;
+        }
+
+        for(int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            String remaining = str.substring(0,i) + str.substring(i+1);
+            permutation(remaining,ch+ans);
+        }
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter N: ");
-        int n = sc.nextInt();
-        System.out.print("Enter M: ");
-        int m = sc.nextInt();
-
-        int[][] matrix = new int[n][m];
-        
-        for(int i = 0; i < n; i++){
-            for(int j = 0; j < m; j++) {
-                matrix[i][j] = sc.nextInt();
-            }
-        }
-
-        System.out.print("Enter X: ");
-        int target = sc.nextInt();
-        int count = 0;
-
-        for(int i = 0; i < n; i++){
-            for(int j = 0; j < m; j++){
-                if(matrix[i][j] == target)
-                    count++;
-            }
-        }
-        System.out.println("Occurrence = " + count);
+        System.out.print("Enter String: ");
+        String str = sc.nextLine();
+        permutation(str,"");
     }
 }
