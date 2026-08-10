@@ -16,17 +16,35 @@
 // }
 
 
+// class Student {
+//     String brand;
+//     double price;
+
+//     public static void main(String[] args) {
+//         Student c1 = new Student();
+
+//         c1.brand = "Toyota";
+//         c1.price = 250000;
+
+//         System.out.println("Brand " + c1.brand);
+//         System.out.println("Price:" + c1.price);
+//     }
+// }
+
 class Student {
-    String brand;
+    String company;
+    String model;
     double price;
 
     public static void main(String[] args) {
-        Student c1 = new Student();
+        Student m1 = new Student();
 
-        c1.brand = "Toyota";
-        c1.price = 250000;
+        m1.company = "Samsung";
+        m1.model = "Galaxy S24";
+        m1.price = 70000;
 
-        System.out.println("Brand " + c1.brand);
-        System.out.println("Price:" + c1.price);
+        System.out.println("Company: " + m1.company);
+        System.out.println("Model: " + m1.model);
+        System.out.println("Price: " + m1.price);
     }
 }
